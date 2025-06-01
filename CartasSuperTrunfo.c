@@ -2,7 +2,7 @@
 
 int main() {
     printf("Desavio Super Trunfo\n");
-    printf("Criar commit\n");
+    printf("Novo commit\n");
     
 
   // Área para entrada de dados
