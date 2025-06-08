@@ -1,7 +1,7 @@
 #include <stdio.h>
 
 int main(){
-    //char carta1;
+ //char carta1;
     char estado = 'A';
     char codigo [6] = "A01";
     char nome_cidade[10] = "Recife";
@@ -11,6 +11,9 @@ int main(){
     int numero_pontos_turisticos1 = 10;
     float quocientedens = (float) populacao / area;
     float quocientepib = (float) pib / populacao;
+    unsigned long int populacaoNumeroGrande = 1488920000;
+    float inversoDensidade = (float) 1 / 1488920000;
+    float superpoder = (float) populacaoNumeroGrande + area + pib + numero_pontos_turisticos1 + quocientepib + inversoDensidade;
 
     //char carta2;
     char estado2 = 'B';
@@ -18,12 +21,16 @@ int main(){
     char nome_cidade2[10] = "Natal";
     int populacao2 = 751300;
     float area2 = 167.401;
-    float pib2 = 24186261.543;
+    float pib2 = 24186261.54;
     int numero_pontos_turisticos2 = 15;
     float quocientedens2 = (float) populacao2 / area2;
-    float quocientepib2 = (float) pib2 / populacao2; 
+    float quocientepib2 = (float) pib2 / populacao2;
+    unsigned long int populacaoNumeroGrande2 = 751300000;
+    float inversoDensidade2 = (float) 1 / 751300000;
+    float superpoder2 = (float) populacaoNumeroGrande2 + area2 + pib2 + numero_pontos_turisticos2 + quocientepib2 + inversoDensidade2;
 
-    printf("*** Desfio Super Trunfo - Nível Aventureiro ***: \n");
+
+    printf("*** Desfio Super Trunfo - Nível Mestre ***: \n");
 
     printf("\n");
 
@@ -52,8 +59,20 @@ int main(){
     printf("Densidade Populacional: %.2f hab/Km²\n", quocientedens);
     scanf("%.2f", &quocientedens);
 
+    printf("Densidade Populacional atualizada: %lu hab/Km²\n", quocientedens);
+    scanf("%lu", &quocientedens);
+
     printf("PIB per Capita: %.2f reais\n", quocientepib);
     scanf("%.2f", &quocientepib);
+
+    printf("PIB per Capita atualizado: %lu reais\n", quocientepib);
+    scanf("%lu", &quocientepib);
+
+     // Calculo do Super poder A
+
+    printf("Super Poder: %lu\n", superpoder);
+    scanf("%lu", &superpoder);
+    
 
     printf("\n");
 
@@ -82,9 +101,33 @@ int main(){
     printf("Densidade Populacional: %.2f hab/Km²\n", quocientedens2);
     scanf("%.2f", &quocientedens2);
 
+    printf("Densidade Populacional atualizada: %lu hab/Km²\n", quocientedens2);
+    scanf("%lu", &quocientedens2);
+
     printf("PIB per Capita: %.2f reais\n", quocientepib2);
     scanf("%.2f", &quocientepib2);
 
-    return 0;
+    printf("PIB per Capita atualizado: %lu reais\n", quocientepib2);
+    scanf("%lu", &quocientepib2);
+
+    // Calculo do Super poder B9
+    printf("Super Poder: %lu\n", superpoder2);
+    scanf("%lu", &superpoder2);
+
+    // Exibir resultado das coparções
+    printf("\n");
+
+    printf("Comparação de cartas: \n");
+    printf("População: Carta 1 venceu: %lu\n", (inversoDensidade >= inversoDensidade2));
+    printf("Área: Carta 1 venceu: %u\n", (area >= area2));
+    printf("PIB: Carta 1 venceu: %u\n", (pib >= pib2));
+    printf("Pontos turísticos: Carta 1 venceu: %d\n", (numero_pontos_turisticos1 >= numero_pontos_turisticos2));
+    printf("Densidade populacional: Carta 2 venceu: %lu\n", (populacaoNumeroGrande >= populacaoNumeroGrande2));
+    printf("PIB per capita atualizado: Carta 1 venceu: %lu\n", (quocientepib >= quocientepib2));
+    printf("Super poder: Carta 1 venceu: %llu\n", (superpoder >= superpoder2));
     
+   
+
+    return 0;
+
 }
